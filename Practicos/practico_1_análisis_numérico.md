@@ -130,4 +130,20 @@ $$
 \end{array}
 $$
 * **b -** $x_{n}=1+\dfrac{1}{2^{2^{n}}}$
-* 
+$$
+\begin{array}{l}
+x_{n}=1+\dfrac{1}{2^{2^{n}}}\longrightarrow 1\text{ cuando }n\longrightarrow\infty \\
+\left|1+\dfrac{1}{2^{2^{n+1}}}-1\right|\leq c\left|1+\dfrac{1}{2^{2^{n}}}-1\right|^{2}\iff  \\
+\dfrac{(2^{2^{n}})^{2}}{2^{2^{n+1}}}\leq c\iff\dfrac{2^{2^{n+1}}}{2^{2^{n+1}}}\leq c\iff 1\leq c \\
+\text{como c es positivo, la serie converge cuadraticamente}
+\end{array}
+$$
+* **c -** $x_{n}=1+\dfrac{1}{n^{n}}$
+$$
+\begin{array}{l}
+x_{n}=1+\dfrac{1}{n^{n}}\longrightarrow 1\text{ cuando }n\longrightarrow\infty \\
+\left|1+\dfrac{1}{(n+1)^{n+1}}-1\right|\leq c\left|1+\dfrac{1}{(n)^{n}}-1\right| \iff \\
+\dfrac{1}{(n+1)^{n+1}}\leq c\dfrac{1}{n^{n}}\iff \\
+\dfrac{n^{n}}{(n+1)^{n+1}}\leq c
+\end{array}
+$$
