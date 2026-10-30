@@ -61,7 +61,7 @@ f(x)^{(4)}=3!(-1)^{3}x^{-4} \\
 f(x)^{(n)}=(n-1)!(-1)^{n-1}x^{-n} \\
 f(x)^{n+1}=n!(-1)^{n}x^{-(n+1)} \\
 \text{Serie de taylor }c=1 \\
-\displaystyle f(x)=\sum_{k=0}^{ \infty} f^{(k)}(1)(x+1)^{k} \\
+\displaystyle f(x)=\sum_{k=0}^{ \infty} \frac{f^{(k)}}{k!} (1)(x-1)^{k} \\
 E_{n}(x)= \dfrac{1}{(n+1)!}f^{(n+1)}(\xi)(x-1)^{n+1} \\
 E_{n}(x)=\dfrac{(-1)^{n}(x-1)^{n+1}}{(n+1)\xi^{n+1}}\quad\text{Para algun }\xi\text{ entre x y 1} \\
 E_{n}(2)=\dfrac{(-1)^{n}}{(n+1)\xi^{n+1}}\quad\text{Para algun }\xi \text{ entre 2 y 1} \\
@@ -143,7 +143,16 @@ $$
 \begin{array}{l}
 x_{n}=1+\dfrac{1}{n^{n}}\longrightarrow 1\text{ cuando }n\longrightarrow\infty \\
 \left|1+\dfrac{1}{(n+1)^{n+1}}-1\right|\leq c\left|1+\dfrac{1}{(n)^{n}}-1\right| \iff \\
-\dfrac{1}{(n+1)^{n+1}}\leq c\dfrac{1}{n^{n}}\iff \\
-\dfrac{n^{n}}{(n+1)^{n+1}}\leq c
+\dfrac{1}{(n+1)^{n+1}}\leq c\dfrac{1}{n^{n}}\iff \dfrac{n^{n}}{(n+1)^{n+1}}\leq c\iff \dfrac{n^{n}}{(n+1)^{n}} \dfrac{n^{n}}{(n+1)} < c \\
+\iff \left( \dfrac{n}{n+1} \right)^{n}\left( \dfrac{n^{n}}{n+1} \right)<c  \\
+\lim_{ n \to \infty }\left( \dfrac{n}{n+1} \right)^{n}\left( \dfrac{n^{n}}{n+1} \right) =e\cdot 0=0  \\
+\implies\text{la convergencia es por lo menos superlineal} \\
+\end{array}
+$$
+### Ejercicio 6
+Para $n$ fijo, demostrar que $\displaystyle\sum_{k=0}^{n}x^{k}=\frac{1}{1-x}+o(x^{n})$ cuando $x\longrightarrow 0$
+$$
+\begin{array}{l}
+\displaystyle\sum_{k=0}^{n}x^{k}=\frac{1}{1-x}+\varepsilon_{n}x^{n}
 \end{array}
 $$
